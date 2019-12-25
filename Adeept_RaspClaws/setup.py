@@ -158,7 +158,7 @@ except:
 
 os.system('sudo chmod 777 //home/pi/startup_spider.sh')
 
-replace_num('/etc/rc.local','fi','fi\n//home/pi/startup_spider.sh start')
+replace_num('/etc/rc.local','fi','fi\n//home/pi/startup.sh start')
 time.sleep(0.2)
 print('restarting')
 
