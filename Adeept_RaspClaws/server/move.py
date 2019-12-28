@@ -52,10 +52,10 @@ else:
 	Left_Right_direction = 0
 Left_Right_input = 300
 Up_Down_input = 300
-Left_Right_Max = 500
-Left_Right_Min = 100
-Up_Down_Max = 500
-Up_Down_Min = 270
+Left_Right_Max = 490
+Left_Right_Min = 120
+Up_Down_Max = 400
+Up_Down_Min = 170
 look_wiggle = 30
 move_stu = 1
 
@@ -1058,12 +1058,28 @@ def look_home():
 	Up_Down_input = 300
 
 
-def relesae():
+def release():
 	pwm.set_all_pwm(0,0)
 
 
 def clean_all():
 	pwm.set_all_pwm(0, 0)
+
+def fold():
+	stand()
+	pwm.set_pwm(5,0,150)
+	pwm.set_pwm(7,0,150)
+	pwm.set_pwm(3,0,225)
+	pwm.set_pwm(9,0,225)
+	time.sleep(3)
+	pwm.set_pwm(3,0,150)
+	pwm.set_pwm(9,0,150)
+	pwm.set_pwm(1,0,225)
+	pwm.set_pwm(11,0,225)
+	time.sleep(3)
+	pwm.set_pwm(1,0,150)
+	pwm.set_pwm(11,0,150)
+	release()
 
 
 def destroy():

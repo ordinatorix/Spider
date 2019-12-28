@@ -1,4 +1,4 @@
-#!/usr/bin/env/python
+i#!/usr/bin/env/python
 # File name   : server.py
 # Description : main programe for RaspClaws
 # Website     : www.adeept.com
