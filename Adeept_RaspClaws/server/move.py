@@ -1067,19 +1067,20 @@ def clean_all():
 
 def fold():
 	stand()
+	time.sleep(5)
 	pwm.set_pwm(5,0,450)
 	pwm.set_pwm(7,0,150)
 	pwm.set_pwm(3,0,400)
 	pwm.set_pwm(9,0,200)
-	time.sleep(5)
+	time.sleep(3)
 	pwm.set_pwm(3,0,450)
 	pwm.set_pwm(9,0,150)
 	pwm.set_pwm(1,0,400)
 	pwm.set_pwm(11,0,200)
-	time.sleep(5)
+	time.sleep(3)
 	pwm.set_pwm(1,0,450)
 	pwm.set_pwm(11,0,150)
-	time.sleep(5)
+	time.sleep(3)
 	release()
 
 
