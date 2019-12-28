@@ -1080,7 +1080,7 @@ def fold():
 	time.sleep(1)
 	pwm.set_pwm(1,0,450)
 	pwm.set_pwm(11,0,150)
-	time.sleep(3)
+	time.sleep(1)
 	release()
 
 
