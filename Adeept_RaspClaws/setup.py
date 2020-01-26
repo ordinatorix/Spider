@@ -122,7 +122,7 @@ path_get = str(search('//home/pi/','server.py'))
 path_get=path_get[:-15]		
 
 try:
-	os.system("cd //home/pi/adeept_raspclaws/create_ap && sudo make install")
+	os.system("cd //home/pi/Documents/Spider/Adeept_Raspclaws/create_ap && sudo make install")
 except:
 	pass
 
@@ -145,14 +145,14 @@ try:
 	os.system('sudo touch //home/pi/.config/autostart/car.desktop')
 	time.sleep(0.2)
 	with open("//home/pi/.config/autostart/car.desktop",'w') as file_to_write:
-		file_to_write.write("[Desktop Entry]\n   Name=Car\n   Comment=Car\n   Exec=sudo python3 //home/pi/adeept_raspclaws/server/server.py\n   Icon=false\n   Terminal=false\n   MutipleArgs=false\n   Type=Application\n   Catagories=Application;Development;\n   StartupNotify=true")
+		file_to_write.write("[Desktop Entry]\n   Name=Car\n   Comment=Car\n   Exec=sudo python3 //home/pi/Documents/Spider/Adeept_Raspclaws/server/server.py\n   Icon=false\n   Terminal=false\n   MutipleArgs=false\n   Type=Application\n   Catagories=Application;Development;\n   StartupNotify=true")
 except:
 	pass
 '''
 try:
 	os.system('sudo touch //home/pi/startup_spider.sh')
 	with open("//home/pi/startup_spider.sh",'w') as file_to_write:
-		file_to_write.write("#!/bin/sh\n#sleep 10s\nsudo python3 //home/pi/Spider/adeept_raspclaws/server/server.py")
+		file_to_write.write("#!/bin/sh\n#sleep 10s\nsudo python3 //home/pi/Documents/Spider/Adeept_Raspclaws/server/server.py")
 except:
 	pass
 
@@ -162,4 +162,4 @@ replace_num('/etc/rc.local','fi','fi\n//home/pi/startup.sh start')
 time.sleep(0.2)
 print('restarting')
 
-os.system("sudo reboot")
+# os.system("sudo reboot")
