@@ -50,6 +50,11 @@ for x in range(1,4):
 		break
 
 for x in range(1,4):
+	if os.system("sudo apt-get install python-rpi.gpio python3-rpi.gpio") == 0:
+		break
+	
+
+for x in range(1,4):
 	if os.system("sudo pip3 install -U pip setuptools wheel") == 0:
 		break		
 
@@ -67,6 +72,10 @@ for x in range(1,4):
 
 for x in range(1,4):
 	if os.system("sudo pip3 install mpu6050-raspberrypi") == 0:
+		break
+
+for x in range(1,4):
+	if os.system("sudo apt-get install python-picamera python3-picamera") == 0:
 		break
 
 try:

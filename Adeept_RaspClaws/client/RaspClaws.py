@@ -93,7 +93,8 @@ fps_threading.start()									 #Thread starts
 
 video_threading=thread.Thread(target=video_thread)		 #Define a thread for FPV and OpenCV
 video_threading.setDaemon(True)							 #'True' means it is a front thread,it would close when the mainloop() closes
-video_threading.start()									 #Thread starts
+video_threading.start()	
+print('started video thread')								 #Thread starts
 
 ########>>>>>VIDEO<<<<<########
 
@@ -101,17 +102,17 @@ video_threading.start()									 #Thread starts
 def replace_num(initial,new_num):   #Call this function to replace data in '.txt' file
 	newline=""
 	str_num=str(new_num)
-	with open("ip.txt","r") as f:
+	with open("IP.txt","r") as f:
 		for line in f.readlines():
 			if(line.find(initial) == 0):
 				line = initial+"%s" %(str_num)
 			newline += line
-	with open("ip.txt","w") as f:
+	with open("IP.txt","w") as f:
 		f.writelines(newline)	#Call this function to replace data in '.txt' file
 
 
 def num_import(initial):			#Call this function to import data from '.txt' file
-	with open("ip.txt") as f:
+	with open("IP.txt") as f:
 		for line in f.readlines():
 			if(line.find(initial) == 0):
 				r=line
@@ -221,6 +222,7 @@ def call_WatchDog(event):
 
 
 def call_Smooth(event):
+	print('smoothmode called')
 	if SmoothMode == 0:
 		tcpClicSock.send(('Smooth_on').encode())
 	else:
